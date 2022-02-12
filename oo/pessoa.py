@@ -1,5 +1,9 @@
 class Pessoa:
+    # atributo default/ de classe:
+    olhos = 2 # toda pessoa tem 2 (funcionando ou não)
+
     def __init__(self, *filhos, nome = 'Sidnei', idade = 53):
+        # atributos de instância #
         self.idade = idade
         self.nome = nome
         self.filhos = list(filhos)
@@ -26,5 +30,8 @@ if __name__ == '__main__':
     # também é possível remover atributos dinamicamente #
     # mas adicionar e apagar atributos dinamicamente não é uma boa prática #
     # Porém, em certos casos especiais é admissível fazê-lo como, por exemplo, mudar um formato de data a ser apresentado em um site #
-
+    print(f'Toda pessoa tem {Pessoa.olhos} olhos.') # atributo default/ seria o global? #
+    print(sidnei.olhos)
+    print(id(Pessoa.olhos))
+    # __dict__ não apresentam atributos de classe
 
